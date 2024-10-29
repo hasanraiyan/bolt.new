@@ -1,9 +1,9 @@
-import { createAnthropic } from '@ai-sdk/anthropic';
+import {  createGoogleGenerativeAI } from '@ai-sdk/google';
 
 export function getAnthropicModel(apiKey: string) {
-  const anthropic = createAnthropic({
+  const anthropic = createGoogleGenerativeAI({
     apiKey,
   });
 
-  return anthropic('claude-3-5-sonnet-20240620');
+  return anthropic('gemini-1.5-flash-latest');
 }
